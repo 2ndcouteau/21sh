@@ -26,49 +26,49 @@
 
 		echo:
 			echo [-Een] [--version] [--help] [ARG]
-				You can print characters with them OCTAL or HEXA values with -e option
+				You can print characters with them OCTAL or HEXA values with -e option 
 				Cf "man echo"
 
 #### Pipe: '|'
 	CMD | CMD
-		You can it to use all of available pipe else shell return error. Test: "CMD | CMD | CMD | CMD ..."
+		You can it to use all of available pipe else shell return error. Test: "CMD | CMD | CMD | CMD ..." 
 		There is no limit of buffer usage; Test : ls -Rla | cat -e
 
 #### Separator: ;
-	You can write mutiple command and separate them with ';'
+	You can write mutiple command and separate them with ';' 
 	CMD ; CMD
 
 #### Redirections: < > << >> :
 		Heredoc: <<
-			Multiple enter for Heredoc are valid but just the last one will be used
-			Waiting Current Keyword is print in prompt
+			Multiple enter for Heredoc are valid but just the last one will be used 
+			Waiting Current Keyword is print in prompt 
 
 #### Groups : []{}()
-		Those parts will be delete before execution
-		Waiting close character is print in prompt
-		To much open character make a warning
+		Those parts will be delete before execution 
+		Waiting close character is print in prompt 
+		To much open character make a warning 
 
 #### Quotes: "" '' ``
-		For "" and '', it's the current usage
-		The `` are like the "" but they resolve "" as simple character instead of quotes
+		For "" and '', it's the current usage 
+		The `` are like the "" but they resolve "" as simple character instead of quotes 
 
 #### Variables: $VARIABLE
-		Call $ENV_NAME_VAR with '$' for replace it by his ENV_VALUE
+		Call $ENV_NAME_VAR with '$' for replace it by his ENV_VALUE 
 
 #### BackSlash: \
 		Use it for echap a character
-		if \ is the last one of a command, the shell return the line and let you continue write your command
+		if \ is the last one of a command, the shell return the line and let you continue write your command 
 
 #### Operator: && ||
-		AND operator &&:	If the first command return SUCCESS then the second command is execute else not.
-		OR operator ||:		If the first command return ERROR then the seconde command is execute else not.
+		AND operator &&:	If the first command return SUCCESS then the second command is execute else not.  
+		OR operator ||:		If the first command return ERROR then the seconde command is execute else not.  
 
 #### Agregator File Descriptor: [number]>&[number] , 2>&1 ...
 		Simple agreg_fd.
 			[number] are strictly necessary.
 		Just the first one valid agreg_fd will be use.
 
-#### Commentary: #
+#### Commentary: \#
 		You can use # for insert commentary at the end of your command
 		Every characters write after # will be a commentary
 
@@ -80,7 +80,7 @@
 	down arrow	: Print next command history
 
 	enter		: Valid command
-	delete		: Delete one character on the right of cursor
+	delete		: Delete one character on the right of cursor 
 	suppr		: Delete one character on the left of cursor
 
 	CTRL +:
@@ -94,7 +94,7 @@
 		l		: Clear the window
 
 		s		: Suspend the current command
-		q		: Start the command previously suspend
+		q		: Start the command previously suspend 
 		c		: Stop the current command
 		z		: Not available
 
@@ -109,19 +109,19 @@
 	BL : Bell signal when Termcaps are unvailable.
 
 	You can resize the window reasonably. :D
-	If Termcap seems broken, use CTRL + l for clean the bugs
+	If Termcap seems broken, use CTRL + l for clean the bugs 
 
-# $SHLVL:
-	Incremente SHLVL env variable for each new shell inception.
+#### $SHLVL:
+	Incremente SHLVL env variable for each new shell inception. 
 
-# Finest Error Management:
-	For the majority of error, they have precise error return.
+#### Finest Error Management:
+	For the majority of error, they have precise error return. 
 
-# No leaks
+##### No leaks
 
-# MAKEFILE:
+##### MAKEFILE:
 	Debug mode:
-		Not available in the final project with norminette because it needs to
+		Not available in the final project with norminette because it needs to 
 		be protected by double inclusion
 		For use it, compile with "make db"
 		If the project is compiled yet, use "make rdb"
