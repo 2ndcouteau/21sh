@@ -136,3 +136,6 @@ This is a solo project.
 	If you try to use an agregator of file descriptor with __cat__ and that the file in parameter of cat does not exist the error output stay on the file. So the file descriptor is not restored. Next outputs have some troubles.
 	
 2. One leak with "env + binary" in a very particulary case.
+
+
+### Grade : 111/100
