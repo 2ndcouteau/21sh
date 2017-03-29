@@ -15,13 +15,13 @@
 			history [VALUE] -- Value print n_VALUE last command in history
 		cd:
 			cd [-LP] [PATH]
-				PATH:	absolute path:	/path
+				PATH:		absolute path:	/path
 										~
 						relative path:	./path
 										~/path
 						direct path:	($PWD)path
 										'-'
-			OPTIONS :	Options can be print everywhere in the command.
+				OPTIONS :	Options can be print everywhere in the command.
 						For disable them you can use "--"
 
 		echo:
@@ -60,8 +60,8 @@
 		if \ is the last one of a command, the shell return the line and let you continue write your command 
 
 #### Operator: && ||
-		AND operator &&:	If the first command return SUCCESS then the second command is execute else not.  
-		OR operator ||:		If the first command return ERROR then the seconde command is execute else not.  
+		AND operator &&: If the first command return SUCCESS then the second command is execute else not.  
+		OR operator ||:	 If the first command return ERROR then the seconde command is execute else not.  
 
 #### Agregator File Descriptor: [number]>&[number] , 2>&1 ...
 		Simple agreg_fd.
@@ -84,25 +84,25 @@
 	suppr		: Delete one character on the left of cursor
 
 	CTRL +:
-		k		: Cut the line after the cursor
-		u		: Cut all the line
-		w		: Paste the last cut
-		e		: Go to the end of the command
-		a		: Go to the begin of the command
+		k	: Cut the line after the cursor
+		u	: Cut all the line
+		w	: Paste the last cut
+		e	: Go to the end of the command
+		a	: Go to the begin of the command
 
-		d		: Exit the shell
-		l		: Clear the window
+		d	: Exit the shell
+		l	: Clear the window
 
-		s		: Suspend the current command
-		q		: Start the command previously suspend 
-		c		: Stop the current command
-		z		: Not available
+		s	: Suspend the current command
+		q	: Start the command previously suspend 
+		c	: Stop the current command
+		z	: Not available
 
 	CTRL + MAJ + \	: Quit
 
 	ALT +:
 		left arrow	: Move to one left word
-		right arrow : Move to one right word
+		right arrow 	: Move to one right word
 		up arrow	: Move to one line up
 		down arrow	: Move to one line down
 
@@ -125,3 +125,10 @@
 		be protected by double inclusion
 		For use it, compile with "make db"
 		If the project is compiled yet, use "make rdb"
+
+
+### BUGS : 
+1. cat bad_file > fichier 2>&1
+	If you try to use an agregator of file descriptor with __cat__ and that the file in parameter of cat does not exist the error output stay on the file. So the file descriptor is not restored. Next outputs have some troubles.
+	
+2. One leak with "env + binary" in a very particulary case.
