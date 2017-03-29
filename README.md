@@ -1,6 +1,6 @@
 # 21SH
 
-This project is the reproduction of a shell. I had to implemente lot of features.
+This project is the reproduction of a shell. I had to implement lot of features.
 The mind is to make it from scratch.
 This is a solo project.
 
