@@ -1,5 +1,9 @@
 # 21SH
 
+This project is the reproduction of a shell. I had to implemente lot of features.
+The mind is to make it from scratch.
+This is a solo project.
+
 #### Builtins :
 		env:
 			env [-i][ENV_VAR_NAME=][ENV_VALUE][CMD]
