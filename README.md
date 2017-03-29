@@ -1,15 +1,6 @@
-#################################################################
-#																#
-#							 - 21SH -							#
-#																#
-#						  DOCUMENTATION							#
-#						  -------------							#
-#							  README							#
-#																#
-#################################################################
+# 21SH
 
-
-Builtins :
+#### Builtins :
 		env:
 			env [-i][ENV_VAR_NAME=][ENV_VALUE][CMD]
 		setenv:
@@ -38,50 +29,50 @@ Builtins :
 				You can print characters with them OCTAL or HEXA values with -e option
 				Cf "man echo"
 
-Pipe: '|'
+#### Pipe: '|'
 	CMD | CMD
 		You can it to use all of available pipe else shell return error. Test: "CMD | CMD | CMD | CMD ..."
 		There is no limit of buffer usage; Test : ls -Rla | cat -e
 
-Separator: ;
+#### Separator: ;
 	You can write mutiple command and separate them with ';'
 	CMD ; CMD
 
-Redirections: < > << >> :
+#### Redirections: < > << >> :
 		Heredoc: <<
 			Multiple enter for Heredoc are valid but just the last one will be used
 			Waiting Current Keyword is print in prompt
 
-Ensembles : []{}()
+#### Groups : []{}()
 		Those parts will be delete before execution
 		Waiting close character is print in prompt
 		To much open character make a warning
 
-Quotes: "" '' ``
+#### Quotes: "" '' ``
 		For "" and '', it's the current usage
 		The `` are like the "" but they resolve "" as simple character instead of quotes
 
-Variables: $VARIABLE
+#### Variables: $VARIABLE
 		Call $ENV_NAME_VAR with '$' for replace it by his ENV_VALUE
 
-BackSlash: \
+#### BackSlash: \
 		Use it for echap a character
 		if \ is the last one of a command, the shell return the line and let you continue write your command
 
-Operator: && ||
+#### Operator: && ||
 		AND operator &&:	If the first command return SUCCESS then the second command is execute else not.
 		OR operator ||:		If the first command return ERROR then the seconde command is execute else not.
 
-Agregator File Descriptor: [number]>&[number] , 2>&1 ...
+#### Agregator File Descriptor: [number]>&[number] , 2>&1 ...
 		Simple agreg_fd.
 			[number] are strictly necessary.
 		Just the first one valid agreg_fd will be use.
 
-Commentary: #
+#### Commentary: #
 		You can use # for insert commentary at the end of your command
 		Every characters write after # will be a commentary
 
-TERMCAPS:
+### TERMCAPS:
 
 	left arrow	: Move to one left character
 	right arrow : Move to one right character
@@ -120,13 +111,15 @@ TERMCAPS:
 	You can resize the window reasonably. :D
 	If Termcap seems broken, use CTRL + l for clean the bugs
 
-$SHLVL:
+# $SHLVL:
 	Incremente SHLVL env variable for each new shell inception.
 
-Finest Error Management:
+# Finest Error Management:
 	For the majority of error, they have precise error return.
 
-MAKEFILE:
+# No leaks
+
+# MAKEFILE:
 	Debug mode:
 		Not available in the final project with norminette because it needs to
 		be protected by double inclusion
