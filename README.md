@@ -65,7 +65,7 @@ This is a solo project.
 
 #### Operator: && ||
 		AND operator &&: If the first command return SUCCESS then the second command is execute else not.  
-		OR operator ||:	 If the first command return ERROR then the seconde command is execute else not.  
+		OR operator ||:	 If the first command return ERROR then the second command is execute else not.  
 
 #### Agregator File Descriptor: [number]>&[number] , 2>&1 ...
 		Simple agreg_fd.
