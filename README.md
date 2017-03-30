@@ -44,6 +44,7 @@ The mind is to make it from scratch.
 	CMD ; CMD
 
 #### Redirections: < > << >> :
+		You can redirect output execution to a file or file to a binary.
 		Heredoc: <<
 			Multiple enter for Heredoc are valid but just the last one will be used 
 			Waiting Current Keyword is print in prompt 
